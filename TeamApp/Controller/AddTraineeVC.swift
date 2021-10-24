@@ -21,7 +21,10 @@ class AddTraineeVC: UIViewController {
     }
     
     @IBAction func addBtnPressed(_ sender: Any) {
-        if (!idField.text!.isEmpty &&  !nameField.text!.isEmpty &&  !emailField.text!.isEmpty) {
+        
+        if (!idField.text!.isInt) {
+            showErrorAlert("ID is required and must be integer")
+        } else if (!idField.text!.isEmpty &&  !nameField.text!.isEmpty &&  !emailField.text!.isEmpty) {
             guard let team = swiftTeam else {
                 return showErrorAlert("Cannot access 'swiftTeam' instance")
             }
@@ -50,3 +53,9 @@ class AddTraineeVC: UIViewController {
     */
 
 }
+extension String {
+    var isInt: Bool {
+        return Int(self) != nil
+    }
+}
+// Reference: https://stackoverflow.com/a/38160725
