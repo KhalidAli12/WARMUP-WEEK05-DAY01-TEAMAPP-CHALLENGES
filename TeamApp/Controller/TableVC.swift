@@ -8,7 +8,7 @@
 import UIKit
 
 class TableVC: UITableViewController {
-    var swiftTeam = T1000()
+    var swiftTeam : T1000!
     
     override func viewWillAppear(_ animated: Bool) {
         print("Trainees in our team: \(swiftTeam.trainees.count)")
