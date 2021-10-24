@@ -10,6 +10,7 @@
 		CF22860F2724BD0800F250E3 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22860D2724BD0800F250E3 /* List.storyboard */; };
 		CF2286112724BD7E00F250E3 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2286102724BD7E00F250E3 /* TableVC.swift */; };
 		CFA90EB92724708D007EABC6 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA90EB82724708D007EABC6 /* TabBarVC.swift */; };
+		CFB6A5D12725ED13004A49FF /* TraineeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6A5D02725ED13004A49FF /* TraineeDetailsVC.swift */; };
 		CFD7E8EF27238EAA00673853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E8EE27238EAA00673853 /* AppDelegate.swift */; };
 		CFD7E8F127238EAA00673853 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E8F027238EAA00673853 /* SceneDelegate.swift */; };
 		CFD7E8F627238EAA00673853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD7E8F427238EAA00673853 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		CF22860E2724BD0800F250E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/List.storyboard; sourceTree = "<group>"; };
 		CF2286102724BD7E00F250E3 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableVC.swift; path = TeamApp/Controller/TableVC.swift; sourceTree = SOURCE_ROOT; };
 		CFA90EB82724708D007EABC6 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarVC.swift; path = TeamApp/Controller/TabBarVC.swift; sourceTree = SOURCE_ROOT; };
+		CFB6A5D02725ED13004A49FF /* TraineeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraineeDetailsVC.swift; sourceTree = "<group>"; };
 		CFD7E8EB27238EAA00673853 /* TeamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD7E8EE27238EAA00673853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFD7E8F027238EAA00673853 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				CFD7E90A2723962C00673853 /* T1000VC.swift */,
 				CF2286102724BD7E00F250E3 /* TableVC.swift */,
 				CFD7E90C272399E200673853 /* AddTraineeVC.swift */,
+				CFB6A5D02725ED13004A49FF /* TraineeDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB6A5D12725ED13004A49FF /* TraineeDetailsVC.swift in Sources */,
 				CFD7E9062723925B00673853 /* T1000.swift in Sources */,
 				CFD7E90D272399E200673853 /* AddTraineeVC.swift in Sources */,
 				CFD7E8EF27238EAA00673853 /* AppDelegate.swift in Sources */,

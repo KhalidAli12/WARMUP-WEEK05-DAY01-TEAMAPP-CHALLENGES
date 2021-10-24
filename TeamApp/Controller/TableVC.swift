@@ -9,7 +9,7 @@ import UIKit
 
 class TableVC: UITableViewController {
     var swiftTeam : T1000!
-    
+    var selectedTrainee: Trainee?
     override func viewWillAppear(_ animated: Bool) {
         print("Trainees in our team: \(swiftTeam.trainees.count)")
         tableView.reloadData()
@@ -81,14 +81,24 @@ class TableVC: UITableViewController {
     }
     */
 
-    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("User selected trainee: \(indexPath.row)")
+        selectedTrainee = swiftTeam.trainees[indexPath.row]
+        performSegue(withIdentifier: "showTraineeDetails", sender: self)
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "showTraineeDetails"){
+            let detailsVC = segue.destination as! TraineeDetailsVC
+        
+            detailsVC.traineeDetails = selectedTrainee
+        }
     }
-    */
 
 }
