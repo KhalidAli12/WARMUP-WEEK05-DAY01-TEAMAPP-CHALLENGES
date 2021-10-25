@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF22860F2724BD0800F250E3 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22860D2724BD0800F250E3 /* List.storyboard */; };
 		CF2286112724BD7E00F250E3 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2286102724BD7E00F250E3 /* TableVC.swift */; };
 		CFA90EB92724708D007EABC6 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA90EB82724708D007EABC6 /* TabBarVC.swift */; };
 		CFB6A5D12725ED13004A49FF /* TraineeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB6A5D02725ED13004A49FF /* TraineeDetailsVC.swift */; };
@@ -16,14 +15,12 @@
 		CFD7E8F627238EAA00673853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD7E8F427238EAA00673853 /* Main.storyboard */; };
 		CFD7E8F827238EAC00673853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD7E8F727238EAC00673853 /* Assets.xcassets */; };
 		CFD7E8FB27238EAC00673853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD7E8F927238EAC00673853 /* LaunchScreen.storyboard */; };
-		CFD7E90427238F0E00673853 /* T1000.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD7E90227238F0E00673853 /* T1000.storyboard */; };
 		CFD7E9062723925B00673853 /* T1000.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E9052723925B00673853 /* T1000.swift */; };
 		CFD7E90B2723962C00673853 /* T1000VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E90A2723962C00673853 /* T1000VC.swift */; };
 		CFD7E90D272399E200673853 /* AddTraineeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E90C272399E200673853 /* AddTraineeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF22860E2724BD0800F250E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/List.storyboard; sourceTree = "<group>"; };
 		CF2286102724BD7E00F250E3 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableVC.swift; path = TeamApp/Controller/TableVC.swift; sourceTree = SOURCE_ROOT; };
 		CFA90EB82724708D007EABC6 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarVC.swift; path = TeamApp/Controller/TabBarVC.swift; sourceTree = SOURCE_ROOT; };
 		CFB6A5D02725ED13004A49FF /* TraineeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraineeDetailsVC.swift; sourceTree = "<group>"; };
@@ -34,7 +31,6 @@
 		CFD7E8F727238EAC00673853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD7E8FA27238EAC00673853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFD7E8FC27238EAC00673853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFD7E90327238F0E00673853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/T1000.storyboard; sourceTree = "<group>"; };
 		CFD7E9052723925B00673853 /* T1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T1000.swift; sourceTree = "<group>"; };
 		CFD7E90A2723962C00673853 /* T1000VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = T1000VC.swift; path = TeamApp/Controller/T1000VC.swift; sourceTree = SOURCE_ROOT; };
 		CFD7E90C272399E200673853 /* AddTraineeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTraineeVC.swift; path = TeamApp/Controller/AddTraineeVC.swift; sourceTree = SOURCE_ROOT; };
@@ -101,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				CFD7E8F427238EAA00673853 /* Main.storyboard */,
-				CFD7E90227238F0E00673853 /* T1000.storyboard */,
-				CF22860D2724BD0800F250E3 /* List.storyboard */,
 				CFD7E8F927238EAC00673853 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -179,9 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD7E8FB27238EAC00673853 /* LaunchScreen.storyboard in Resources */,
-				CF22860F2724BD0800F250E3 /* List.storyboard in Resources */,
 				CFD7E8F827238EAC00673853 /* Assets.xcassets in Resources */,
-				CFD7E90427238F0E00673853 /* T1000.storyboard in Resources */,
 				CFD7E8F627238EAA00673853 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF22860D2724BD0800F250E3 /* List.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF22860E2724BD0800F250E3 /* Base */,
-			);
-			name = List.storyboard;
-			sourceTree = "<group>";
-		};
 		CFD7E8F427238EAA00673853 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -229,14 +213,6 @@
 				CFD7E8FA27238EAC00673853 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CFD7E90227238F0E00673853 /* T1000.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFD7E90327238F0E00673853 /* Base */,
-			);
-			name = T1000.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

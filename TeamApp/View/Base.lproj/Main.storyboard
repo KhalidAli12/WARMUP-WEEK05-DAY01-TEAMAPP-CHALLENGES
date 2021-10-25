@@ -3,6 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,39 +12,406 @@
         <scene sceneID="1Oz-Ks-OAh">
             <objects>
                 <tabBarController id="toH-BS-T27" customClass="TabBarVC" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jox-uy-He0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9kO-jg-ve5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="GF9-6n-2ob" kind="relationship" relationship="viewControllers" id="PNO-7h-cEF"/>
-                        <segue destination="whr-IA-e5B" kind="relationship" relationship="viewControllers" id="Wci-vz-xr3"/>
+                        <segue destination="w1M-jP-icj" kind="relationship" relationship="viewControllers" id="doa-Nd-lGw"/>
+                        <segue destination="PtL-sT-Gpl" kind="relationship" relationship="viewControllers" id="nsU-Sr-HNw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKw-rn-Dz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-456" y="-107"/>
+            <point key="canvasLocation" x="-346" y="574"/>
         </scene>
-        <!--bootcamp-board-->
-        <scene sceneID="2J3-rn-emp">
+        <!--T1000VC-->
+        <scene sceneID="4bK-xt-2LD">
             <objects>
-                <viewControllerPlaceholder storyboardName="T1000" referencedIdentifier="bootcamp-board" id="GF9-6n-2ob" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="AGo-0u-AOn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jY7-Q1-paB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Yyj-Of-fKy" customClass="T1000VC" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="omi-wC-Igx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYm-fd-wNR">
+                                <rect key="frame" x="20" y="693" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7Sb-Wi-IOf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add New Trainee">
+                                    <fontDescription key="titleFontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="YbA-YL-RVN" kind="show" identifier="addTraineeSegue" id="SC1-4V-jTD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68G-RN-933">
+                                <rect key="frame" x="20" y="218" width="153" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vr-Km-gl3">
+                                <rect key="frame" x="20" y="262" width="153" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# Trainees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c39-oK-Jrf">
+                                <rect key="frame" x="16" y="350" width="157" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kog-Hb-NGt">
+                                <rect key="frame" x="20" y="306" width="153" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# Instructors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np4-M3-JUX">
+                                <rect key="frame" x="16" y="394" width="157" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="programName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="183-AS-kXS">
+                                <rect key="frame" x="181" y="218" width="193" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="programType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-YO-9Gk">
+                                <rect key="frame" x="181" y="262" width="193" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="programCity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xN-ZA-S4g">
+                                <rect key="frame" x="181" y="306" width="193" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="traineeCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iw-uS-2Mw">
+                                <rect key="frame" x="181" y="350" width="193" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="instructorsCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-I0-yyF">
+                                <rect key="frame" x="181" y="393" width="193" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to T1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6it-QU-DRU">
+                                <rect key="frame" x="18" y="88" width="354" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pvm-2o-o1F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pvm-2o-o1F" firstAttribute="bottom" secondItem="hYm-fd-wNR" secondAttribute="bottom" constant="50" id="4Cz-9g-f5T"/>
+                            <constraint firstItem="hYm-fd-wNR" firstAttribute="leading" secondItem="pvm-2o-o1F" secondAttribute="leading" constant="20" id="J4j-RO-YYO"/>
+                            <constraint firstItem="pvm-2o-o1F" firstAttribute="trailing" secondItem="hYm-fd-wNR" secondAttribute="trailing" constant="20" id="d3a-Wy-KTV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="YR1-4Q-x6U">
+                        <barButtonItem key="backBarButtonItem" title="T1000 Bootcamp" id="2il-WI-kRz"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="instructorsCount" destination="m8m-I0-yyF" id="MQW-o7-Jnj"/>
+                        <outlet property="programCity" destination="3xN-ZA-S4g" id="m4i-6V-vfk"/>
+                        <outlet property="programName" destination="183-AS-kXS" id="0kC-p3-bCe"/>
+                        <outlet property="programType" destination="EhG-YO-9Gk" id="aCA-wV-HD0"/>
+                        <outlet property="traineesCount" destination="8iw-uS-2Mw" id="w8I-xW-Yss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWq-TE-PuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="-107"/>
+            <point key="canvasLocation" x="1514" y="-141"/>
         </scene>
-        <!--tables-board-->
-        <scene sceneID="cu6-fl-UFF">
+        <!--Add Trainee-->
+        <scene sceneID="GN8-wk-kkr">
             <objects>
-                <viewControllerPlaceholder storyboardName="List" referencedIdentifier="tables-board" id="whr-IA-e5B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vFc-dl-Jff"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztz-QZ-9Bw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="YbA-YL-RVN" customClass="AddTraineeVC" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHD-m9-cjY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUT-eH-I6i">
+                                <rect key="frame" x="50" y="182" width="22" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IfH-ni-wzF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-Og-ACI">
+                                <rect key="frame" x="50" y="307" width="54.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cYm-fT-uod"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-3D-nAA">
+                                <rect key="frame" x="50" y="247" width="43.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="YwC-SJ-zNl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9Pl-up-gob">
+                                <rect key="frame" x="178" y="185" width="186" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="huQ-hX-JSB"/>
+                                    <constraint firstAttribute="width" constant="186" id="ljr-sU-2Jf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="one-time-code"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTS-mX-pk6">
+                                <rect key="frame" x="178" y="247" width="186" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="DLf-LJ-Sqt"/>
+                                    <constraint firstAttribute="width" constant="186" id="lIj-jb-DmQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1f-Nb-6Xu">
+                                <rect key="frame" x="178" y="307" width="186" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="bmT-HT-2cF"/>
+                                    <constraint firstAttribute="height" constant="35" id="f8d-UI-6zU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prY-Oc-iDQ">
+                                <rect key="frame" x="75" y="392" width="240" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Pfw-GH-u9J"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Trainee">
+                                    <fontDescription key="titleFontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addBtnPressed:" destination="YbA-YL-RVN" eventType="touchUpInside" id="lpX-ZS-KRd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lsv-N3-iSt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AU2-Og-ACI" firstAttribute="leading" secondItem="Lsv-N3-iSt" secondAttribute="leading" constant="50" id="91E-bv-v9Q"/>
+                            <constraint firstItem="9Pl-up-gob" firstAttribute="top" secondItem="Lsv-N3-iSt" secondAttribute="top" constant="97" id="Ckf-Uj-JuG"/>
+                            <constraint firstItem="Lsv-N3-iSt" firstAttribute="trailing" secondItem="9Pl-up-gob" secondAttribute="trailing" constant="50" id="F7N-nd-4mk"/>
+                            <constraint firstItem="OUT-eH-I6i" firstAttribute="leading" secondItem="Lsv-N3-iSt" secondAttribute="leading" constant="50" id="G7Q-0g-V4L"/>
+                            <constraint firstItem="Lsv-N3-iSt" firstAttribute="trailing" secondItem="J1f-Nb-6Xu" secondAttribute="trailing" constant="50" id="Nhe-nX-WQR"/>
+                            <constraint firstItem="OUT-eH-I6i" firstAttribute="top" secondItem="Lsv-N3-iSt" secondAttribute="top" constant="94" id="PyG-fn-Ul2"/>
+                            <constraint firstItem="AU2-Og-ACI" firstAttribute="top" secondItem="IrI-3D-nAA" secondAttribute="bottom" constant="25" id="Tbj-kp-ksM"/>
+                            <constraint firstItem="rTS-mX-pk6" firstAttribute="top" secondItem="9Pl-up-gob" secondAttribute="bottom" constant="27" id="WQz-Ra-kh9"/>
+                            <constraint firstItem="J1f-Nb-6Xu" firstAttribute="top" secondItem="rTS-mX-pk6" secondAttribute="bottom" constant="25" id="fC5-Va-tSC"/>
+                            <constraint firstItem="prY-Oc-iDQ" firstAttribute="centerY" secondItem="IHD-m9-cjY" secondAttribute="centerY" id="gu4-FR-AfO"/>
+                            <constraint firstItem="Lsv-N3-iSt" firstAttribute="trailing" secondItem="rTS-mX-pk6" secondAttribute="trailing" constant="50" id="gw7-hp-CU4"/>
+                            <constraint firstItem="IrI-3D-nAA" firstAttribute="top" secondItem="OUT-eH-I6i" secondAttribute="bottom" constant="30" id="hV4-hL-3Fn"/>
+                            <constraint firstItem="IrI-3D-nAA" firstAttribute="leading" secondItem="Lsv-N3-iSt" secondAttribute="leading" constant="50" id="o3e-Jz-e0U"/>
+                            <constraint firstItem="prY-Oc-iDQ" firstAttribute="centerX" secondItem="IHD-m9-cjY" secondAttribute="centerX" id="uyg-36-wbk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Trainee" largeTitleDisplayMode="always" id="ZiF-Bq-6cl">
+                        <barButtonItem key="backBarButtonItem" title="T1000" id="cm8-he-iJ3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="J1f-Nb-6Xu" id="DUd-Rr-DwE"/>
+                        <outlet property="idField" destination="9Pl-up-gob" id="muc-oD-3bF"/>
+                        <outlet property="nameField" destination="rTS-mX-pk6" id="DnJ-rS-qsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyy-mb-rT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-49"/>
+            <point key="canvasLocation" x="2367" y="-142"/>
+        </scene>
+        <!--T1000 Board-->
+        <scene sceneID="OXw-BN-TCO">
+            <objects>
+                <navigationController storyboardIdentifier="bootcamp-board" automaticallyAdjustsScrollViewInsets="NO" id="w1M-jP-icj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="T1000 Board" image="heart.circle.fill" catalog="system" id="Qoy-St-SCM"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8mJ-6h-Z9h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yyj-Of-fKy" kind="relationship" relationship="rootViewController" id="2eR-Du-eLK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWS-9l-xoN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="-143"/>
+        </scene>
+        <!--Trainees-->
+        <scene sceneID="PkJ-Ka-l7J">
+            <objects>
+                <tableViewController title="Trainees" id="fwB-0v-AfD" customClass="TableVC" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="30Y-RE-dCP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="traineeCell" id="eTK-r6-Xbv">
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eTK-r6-Xbv" id="P7O-F2-cIb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fwB-0v-AfD" id="gbz-xb-Ds5"/>
+                            <outlet property="delegate" destination="fwB-0v-AfD" id="KqV-MK-fB2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gBS-hH-KUf">
+                        <barButtonItem key="backBarButtonItem" title="Trainees List" id="Ha8-cZ-3Qu"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="zrj-Sy-Wkd" kind="show" identifier="showTraineeDetails" id="KOT-nW-062"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOj-mB-agF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="574"/>
+        </scene>
+        <!--Trainee DetailsVC-->
+        <scene sceneID="QLm-So-MCo">
+            <objects>
+                <viewController id="zrj-Sy-Wkd" customClass="TraineeDetailsVC" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="As7-vc-4gY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trainee Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7g-Qh-nej">
+                                <rect key="frame" x="26" y="158" width="362" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKM-Rr-fml">
+                                <rect key="frame" x="26" y="257" width="106" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzO-j4-geI">
+                                <rect key="frame" x="26" y="327" width="106" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EMAIL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-Hd-jx6">
+                                <rect key="frame" x="26" y="397" width="106" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="traineeID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOy-px-H0z">
+                                <rect key="frame" x="155" y="257" width="233" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="traineeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaF-0K-o5I">
+                                <rect key="frame" x="155" y="327" width="233" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="traineeEmail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SM-cb-n7M">
+                                <rect key="frame" x="155" y="397" width="233" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wTm-lR-jy0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z4J-bE-DjB"/>
+                    <connections>
+                        <outlet property="traineeEmailLabel" destination="0SM-cb-n7M" id="nqt-qU-hxC"/>
+                        <outlet property="traineeIDLabel" destination="kOy-px-H0z" id="9vX-83-Brz"/>
+                        <outlet property="traineeNameLabel" destination="MaF-0K-o5I" id="tPS-n2-E8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Okr-ow-0ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2367" y="574"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="C3D-7a-IGM">
+            <objects>
+                <navigationController storyboardIdentifier="tables-board" automaticallyAdjustsScrollViewInsets="NO" id="PtL-sT-Gpl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="list.bullet.rectangle" catalog="system" id="oD0-bd-k3e"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D99-pv-nh1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fwB-0v-AfD" kind="relationship" relationship="rootViewController" id="MGq-Oc-Pxh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aw-eQ-Ufv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="574"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
