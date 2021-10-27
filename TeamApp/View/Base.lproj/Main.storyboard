@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab BarVC-->
+        <!--Tab Bar Controller-->
         <scene sceneID="1Oz-Ks-OAh">
             <objects>
-                <tabBarController id="toH-BS-T27" customClass="TabBarVC" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="toH-BS-T27" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Jox-uy-He0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9kO-jg-ve5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
